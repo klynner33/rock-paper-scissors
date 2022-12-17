@@ -6,7 +6,18 @@ function getComputerChoice() {
         return "paper";
     } else {
         return "scissors";
-    }  
+    } 
 }
 
 console.log(getComputerChoice());
+
+function playerSelection(myPick) {
+    if (myPick.toLowerCase() === "rock") {
+        return "rock";
+    } else if (myPick.toLowerCase === "paper") {
+        return "paper";
+    }   else {
+        return "scissors";
+    }
+
+    }
