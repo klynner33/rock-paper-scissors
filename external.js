@@ -10,38 +10,70 @@ function getComputerChoice() {
     } 
 }
 
-function playRound(playerSelection, computerSelection) {
+let playerScore = 0;
+let computerScore = 0;
 
+function playRound(playerSelection, computerSelection) {
+    
     if (playerSelection === computerSelection) {
         return "It's a tie!";
     } else if (
         playerSelection === "rock" && computerSelection === "scissors" ||
         playerSelection === "paper" && computerSelection === "rock"  ||
         playerSelection === "scissors" && computerSelection === "paper") {
+             playerScore++
             return "You win!";
-        } else {
+        } else if (
+        playerSelection === "scissors" && computerSelection === "rock" ||
+        playerSelection === "rock" && computerSelection === "paper"  ||
+        playerSelection === "paper" && computerSelection === "scissors") {
+             computerScore++
             return "Computer wins. Try again!";
+        } else {
+            return "That is not a valid answer. Try again!"
         }
+    }
+
+ function game() {
+    function playRound() {
+    for (let i = 0; i < 5; i++) {
+        if (i === "You win!") {
+            playerScore++;
+        } else if (i === "Computer wins. Try again!") {
+            computerScore++;
+        }
+    }
 }
-
-const playerSelection = "PAPER".toLowerCase();
+}
+let choice = prompt("What do you choose?");
+const playerSelection = choice.toLowerCase();
 const computerSelection = getComputerChoice();
-
+console.log("Computer picks: " + computerSelection);
+console.log("Player picks: " + playerSelection);
 console.log (playRound(playerSelection, computerSelection));
-console.log("Computer: " + computerSelection);
-console.log("Player: " + playerSelection);
+console.log(playerScore);
+console.log(computerScore);
 
-/* function getPlayerChoice(myPick) {
-    if (myPick.toLowerCase() === "rock") {
-        return "rock";
-    } else if (myPick.toLowerCase() === "paper") {
-        return "paper";
-    }   else {
-        return "scissors";
+
+
+
+/* function game() {
+    let playerScore = 0;
+    let computerScore = 0;
+    for (let i = 0; i < 5; i++) {
+        let result = playRound(playerSelection, computerSelection);
+        if (result === "You win!") {
+            playerScore++;
+        } else if (result === "Computer wins. Try again!") {
+            computerScore++;
+        } else {
+            return "No points for a tie!";
+        }   
     }
+    console.log("Player score: " + playerScore);
+    console.log("Computer score: " + computerScore); 
+} */
 
-    }
-
-    console.log(getPlayerChoice("rock")); */
+game();
 
 
