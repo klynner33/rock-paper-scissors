@@ -157,7 +157,7 @@ span {
         flex-direction: column;
     }
 
-    .choice-heading {
+    .choice-heading .result-container {
         font-size: 1.5rem;
     }
 
