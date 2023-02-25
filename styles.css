@@ -162,6 +162,10 @@ span {
         font-size: 1.5rem;
     }
 
+    .selection, .computer-selection {
+        font-size: 3rem;
+    }
+
     .result-container {
         font-size: 1.2rem;
     }
