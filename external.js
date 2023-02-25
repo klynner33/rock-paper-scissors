@@ -12,14 +12,30 @@ let computerSelection = "";
 let playerScore = 0;
 let computerScore = 0;
 
+
 selectionRock.addEventListener("click", function(e) {
-    getPlayerChoice("rock");
+    
+    if (playerScore === 5 || computerScore === 5) {
+        return;
+    } else {
+        getPlayerChoice("rock");  
+    }
 });
 selectionPaper.addEventListener("click", function(e) {
-    getPlayerChoice("paper");
+    
+    if (playerScore === 5 || computerScore === 5) {
+        return;
+    } else {
+        getPlayerChoice("paper");
+    }
 });
 selectionScissors.addEventListener("click", function(e) {
-    getPlayerChoice("scissors");
+    
+    if (playerScore === 5 || computerScore === 5) {
+        return;
+    } else {
+        getPlayerChoice("scissors");
+    }
 });
 
 playBtn.addEventListener("click", function(e) { 
@@ -32,6 +48,7 @@ function getPlayerChoice(playerChoice) {
     convertComputerChoice();
     playRound(playerSelection, computerSelection);
     checkScore();
+    
 }
 
 function getComputerChoice() {
