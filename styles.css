@@ -157,11 +157,20 @@ span {
         flex-direction: column;
     }
 
-    .choice-heading .result-container {
+    .choice-heading {
         font-size: 1.5rem;
+    }
+
+    .result-container {
+        font-size: 1.2rem;
     }
 
     .play-btn {
         font-size: 1.5rem;
+        width: 80%;
+    }
+
+    .play, .scorebox, .score-heading, .result-container, .computer-selection, .choice-container {
+        margin-top: 5px;
     }
 }
