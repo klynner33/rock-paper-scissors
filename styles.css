@@ -47,6 +47,7 @@ span {
     font-size: 2.3rem;
     align-items: center;
     padding: 0 15px;
+    
 }
 
 .selection {
@@ -147,10 +148,13 @@ span {
     background-color:rgb(255, 180, 40);
 }
 
-@media (max-width: 630px) {
+@media (max-width: 640px) {
     .main-heading {
         height: 200px;
-        width: 100%;
+    }
+
+    .choice-container {
+        flex-direction: column;
     }
 
     .choice-heading {
