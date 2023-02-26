@@ -149,6 +149,10 @@ span {
 }
 
 @media (max-width: 640px) {
+    .main-heading {
+        height: 80px;
+        padding-top: 5px;
+    }
 
     h1 {
         font-size: 2rem;
@@ -175,7 +179,7 @@ span {
         width: 80%;
     }
 
-    .play, .scorebox, .score-heading, .result-container, .computer-selection, .choice-container {
-        margin-top: 5px;
+    .play, .scorebox, .score-heading, .result-container, .computer-selection, .choice-heading {
+        margin-top: 8px;
     }
 }
